@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/github.io/autowaits_website/static/css/main.41314436.css",
-    "main.js": "/github.io/autowaits_website/static/js/main.69f370e5.js",
+    "main.js": "/github.io/autowaits_website/static/js/main.2adb26db.js",
     "static/media/hero-bg.jpg": "/github.io/autowaits_website/static/media/hero-bg.01b6184b96c262140cd5.jpg",
     "index.html": "/github.io/autowaits_website/index.html",
     "main.41314436.css.map": "/github.io/autowaits_website/static/css/main.41314436.css.map",
-    "main.69f370e5.js.map": "/github.io/autowaits_website/static/js/main.69f370e5.js.map"
+    "main.2adb26db.js.map": "/github.io/autowaits_website/static/js/main.2adb26db.js.map"
   },
   "entrypoints": [
     "static/css/main.41314436.css",
-    "static/js/main.69f370e5.js"
+    "static/js/main.2adb26db.js"
   ]
 }
