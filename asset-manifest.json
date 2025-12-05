@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/autowaits_website/static/css/main.eccd9d17.css",
+    "main.js": "/autowaits_website/static/js/main.ee716b48.js",
+    "static/media/hero-bg.jpg": "/autowaits_website/static/media/hero-bg.01b6184b96c262140cd5.jpg",
+    "index.html": "/autowaits_website/index.html",
+    "main.eccd9d17.css.map": "/autowaits_website/static/css/main.eccd9d17.css.map",
+    "main.ee716b48.js.map": "/autowaits_website/static/js/main.ee716b48.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.eccd9d17.css",
+    "static/js/main.ee716b48.js"
+  ]
+}
