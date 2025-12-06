@@ -1,0 +1,19 @@
+[debug] [2025-12-06T18:59:16.502Z] ----------------------------------------------------------------------
+[debug] [2025-12-06T18:59:16.505Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Shazar\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2025-12-06T18:59:16.505Z] CLI Version:   14.27.0
+[debug] [2025-12-06T18:59:16.505Z] Platform:      win32
+[debug] [2025-12-06T18:59:16.505Z] Node Version:  v24.11.1
+[debug] [2025-12-06T18:59:16.505Z] Time:          Sat Dec 06 2025 23:59:16 GMT+0500 (Pakistan Standard Time)
+[debug] [2025-12-06T18:59:16.505Z] ----------------------------------------------------------------------
+[debug] 
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\VS_Code_Projects\autowaits_website
+

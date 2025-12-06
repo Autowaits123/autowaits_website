@@ -1,21 +1,38 @@
-import React from "react";
+import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
+import logo from "../assets/logo.png";
 
 export default function Navbar(){
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => setOpen((v) => !v);
+
   return (
     <header className="navbar container" style={{paddingTop:16}}>
       <div className="brand">
-        <span className="logo" />
+        <img src={logo} alt="Autowaits" className="nav-logo" />
         <div>
-          <div style={{fontSize:16}}>Autowaits</div>
+          <div style={{fontSize:16, color:'#16a34a'}}>Autowaits</div>
           <div style={{fontSize:12,color:'#6b7280'}}>WhatsApp Automation</div>
         </div>
       </div>
-      <nav className="nav-links">
-        <a href="#features">Features</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#cases">Case Studies</a>
-        <a href="#docs">Documentation</a>
-        <a href="#contact">Contact</a>
+
+      <button
+        className={`nav-toggle ${open ? 'open' : ''}`}
+        onClick={toggleMenu}
+        aria-label={open ? 'Close menu' : 'Open menu'}
+        aria-expanded={open}
+      >
+        <span />
+        <span />
+        <span />
+      </button>
+
+      <nav className={`nav-links ${open ? 'open' : ''}`} onClick={() => setOpen(false)}>
+        <NavLink to="/home" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Home</NavLink>
+        <NavLink to="/pricing" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Pricing</NavLink>
+        <NavLink to="/casestudies" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Case Studies</NavLink>
+        <NavLink to="/contact" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Contact</NavLink>
       </nav>
     </header>
   );

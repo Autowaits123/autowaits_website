@@ -1,6 +1,11 @@
 import React from "react";
 
 export default function Hero(){
+  const scrollToContact = () => {
+    const el = document.getElementById('contact');
+    if(el) el.scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
+
   return (
     <section className="hero">
       <div className="hero-overlay">
@@ -12,8 +17,8 @@ export default function Hero(){
           <p>Transform customer interactions with intelligent automation. Handle reservations, orders, and support 24/7 without lifting a finger.</p>
 
           <div className="cta-row" style={{justifyContent:'center',marginTop:18}}>
-            <button className="btn btn-primary">Get Started Free</button>
-            <button className="btn btn-ghost">Schedule Demo</button>
+            <button className="btn btn-primary" type="button" onClick={scrollToContact}>Get Started Free</button>
+            <button className="btn btn-ghost" type="button" onClick={scrollToContact}>Schedule Demo</button>
           </div>
 
           <div className="metrics" style={{marginTop:22}}>

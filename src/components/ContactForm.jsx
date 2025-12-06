@@ -3,7 +3,7 @@ import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import { db } from "../firebase";
 
 export default function ContactForm(){
-  const [form, setForm] = useState({name:'', email:'', phone:'', restaurant:'', message:''});
+  const [form, setForm] = useState({name:'', email:'', phone:'', restaurant:'', city:'', country:'', message:''});
   const [status, setStatus] = useState('');
 
   const handleChange = e => setForm({...form,[e.target.name]: e.target.value});
@@ -18,11 +18,13 @@ export default function ContactForm(){
         email: form.email,
         phone: form.phone,
         restaurant: form.restaurant,
+        city: form.city || null,
+        country: form.country || null,
         message: form.message,
         createdAt: serverTimestamp()
       });
       setStatus('sent');
-      setForm({name:'', email:'', phone:'', restaurant:'', message:''});
+      setForm({name:'', email:'', phone:'', restaurant:'', city:'', country:'', message:''});
     }catch(err){
       console.error(err);
       setStatus('error');
@@ -31,12 +33,13 @@ export default function ContactForm(){
 
   return (
     <div id="contact" className="contact-card">
-      <h3 style={{marginTop:0}}>Schedule Free Demo</h3>
       <form onSubmit={submit}>
         <input name="name" placeholder="Your Name *" value={form.name} onChange={handleChange} required />
         <input name="email" placeholder="Email Address *" type="email" value={form.email} onChange={handleChange} required />
         <input name="phone" placeholder="Phone Number *" value={form.phone} onChange={handleChange} required />
         <input name="restaurant" placeholder="Restaurant Name" value={form.restaurant} onChange={handleChange} />
+        <input name="city" placeholder="City" value={form.city} onChange={handleChange} />
+        <input name="country" placeholder="Country" value={form.country} onChange={handleChange} />
         <textarea name="message" placeholder="Tell us about your needs..." value={form.message} onChange={handleChange} />
         <button className="btn btn-primary" type="submit" style={{width:'100%'}}>
           {status === 'sending' ? 'Sending...' : 'Schedule Free Demo'}

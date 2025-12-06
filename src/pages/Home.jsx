@@ -17,7 +17,7 @@ export default function Home(){
             <p className="small-muted">Get started with a free demo and see how WhatsApp automation can revolutionize your customer service.</p>
             <div style={{marginTop:22,fontSize:14}}>
               <div><strong>Email Us</strong><div className="small-muted">contact.autowaits@gmail.com</div></div>
-              <div style={{marginTop:12}}><strong>Call Us</strong><div className="small-muted">+92 337828693</div></div>
+              <div style={{marginTop:12}}><strong>Call Us</strong><div className="small-muted">+1 (424) 209-3742</div></div>
               <div style={{marginTop:12}}><strong>Visit Us</strong><div className="small-muted">Karachi, Pakistan</div></div>
             </div>
           </div>
