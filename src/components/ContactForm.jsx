@@ -5,11 +5,18 @@ import { db } from "../firebase";
 export default function ContactForm(){
   const [form, setForm] = useState({name:'', email:'', phone:'', restaurant:'', city:'', country:'', message:''});
   const [status, setStatus] = useState('');
+  const FIRE_PROJECT_ID = process.env.REACT_APP_FIRE_PROJECT_ID;
 
   const handleChange = e => setForm({...form,[e.target.name]: e.target.value});
 
   const submit = async (e) => {
     e.preventDefault();
+    // fast-fail if Firebase isn't configured (common on production if env vars missing)
+    if (!FIRE_PROJECT_ID) {
+      console.error('Firebase project ID is missing. Set REACT_APP_FIRE_PROJECT_ID in environment.');
+      setStatus('error');
+      return;
+    }
     setStatus('sending');
     try{
       const coll = collection(db, "leads");
