@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import logo from "../assets/logo.png";
 
@@ -6,6 +6,16 @@ export default function Navbar(){
   const [open, setOpen] = useState(false);
 
   const toggleMenu = () => setOpen((v) => !v);
+
+  // prevent background scroll when mobile menu is open
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+    return () => document.body.classList.remove('no-scroll');
+  }, [open]);
 
   return (
     <header className="navbar container" style={{paddingTop:16}}>
@@ -28,7 +38,7 @@ export default function Navbar(){
         <span />
       </button>
 
-      <nav className={`nav-links ${open ? 'open' : ''}`} onClick={() => setOpen(false)}>
+      <nav className={`nav-links ${open ? 'open' : ''}`} onClick={() => setOpen(false)} aria-hidden={!open}>
         <NavLink to="/home" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Home</NavLink>
         <NavLink to="/pricing" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Pricing</NavLink>
         <NavLink to="/casestudies" className={({isActive}) => `nav-item ${isActive ? 'active' : ''}`}>Case Studies</NavLink>
