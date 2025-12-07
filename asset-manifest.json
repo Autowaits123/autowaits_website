@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.998b700b.css",
-    "main.js": "/static/js/main.8f27d822.js",
-    "static/media/logo.png": "/static/media/logo.cf4b2f5e211e19b8369b.png",
-    "static/media/hero-bg.jpg": "/static/media/hero-bg.01b6184b96c262140cd5.jpg",
-    "index.html": "/index.html",
-    "main.998b700b.css.map": "/static/css/main.998b700b.css.map",
-    "main.8f27d822.js.map": "/static/js/main.8f27d822.js.map"
+    "main.css": "/autowaits_website/static/css/main.6534f364.css",
+    "main.js": "/autowaits_website/static/js/main.3cb5ac2c.js",
+    "static/media/logo.png": "/autowaits_website/static/media/logo.cf4b2f5e211e19b8369b.png",
+    "static/media/hero-bg.jpg": "/autowaits_website/static/media/hero-bg.01b6184b96c262140cd5.jpg",
+    "index.html": "/autowaits_website/index.html",
+    "main.6534f364.css.map": "/autowaits_website/static/css/main.6534f364.css.map",
+    "main.3cb5ac2c.js.map": "/autowaits_website/static/js/main.3cb5ac2c.js.map"
   },
   "entrypoints": [
-    "static/css/main.998b700b.css",
-    "static/js/main.8f27d822.js"
+    "static/css/main.6534f364.css",
+    "static/js/main.3cb5ac2c.js"
   ]
 }
