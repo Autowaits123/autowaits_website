@@ -18,7 +18,7 @@ export default function Home(){
             <div style={{marginTop:22,fontSize:14}}>
               <div><strong>Email Us</strong><div className="small-muted">contact.autowaits@gmail.com</div></div>
               <div style={{marginTop:12}}><strong>Call Us</strong><div className="small-muted">+1 (424) 209-3742</div></div>
-              <div style={{marginTop:12}}><strong>Visit Us</strong><div className="small-muted">Karachi, Pakistan</div></div>
+              <div style={{marginTop:12}}><strong>Visit Us</strong><div className="small-muted">California, United States</div></div>
             </div>
           </div>
           <ContactForm />
