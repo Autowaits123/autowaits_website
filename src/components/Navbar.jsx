@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 export default function Navbar(){
@@ -19,13 +19,13 @@ export default function Navbar(){
 
   return (
     <header className="navbar container" style={{paddingTop:16}}>
-      <div className="brand">
+      <Link to="/home" className="brand" style={{display:'flex',alignItems:'center',textDecoration:'none',color:'inherit'}}>
         <img src={logo} alt="Autowaits" className="nav-logo" />
         <div>
           <div style={{fontSize:16, color:'#16a34a'}}>Autowaits</div>
           <div style={{fontSize:12,color:'#6b7280'}}>WhatsApp Automation</div>
         </div>
-      </div>
+      </Link>
 
       <button
         className={`nav-toggle ${open ? 'open' : ''}`}
